@@ -1,0 +1,118 @@
+<html> 
+<head> 
+	<script> 
+		//function that display value 
+		function dis(val) 
+		{ 
+			document.getElementById("result").value+=val 
+		} 
+		
+		//function that evaluates the digit and return result 
+		function solve() 
+		{ 
+			let x = document.getElementById("result").value 
+			let y = eval(x) 
+			document.getElementById("result").value = y 
+		} 
+		
+		//function that clear the display 
+		function clr() 
+		{ 
+			document.getElementById("result").value = "" 
+		} 
+	</script> 
+	<!-- for styling -->
+	<style> 
+		.title{ 
+		margin-bottom: 10px; 
+		text-align:center; 
+		width: 210px; 
+		color:green; 
+		border: solid black 2px; 
+		} 
+
+		input[type="button"] 
+		{ 
+		background-color:green; 
+		color: black; 
+		border: solid black 2px; 
+		width:100% 
+		} 
+
+		input[type="text"] 
+		{ 
+		background-color:white; 
+		border: solid black 2px; 
+		width:100% 
+		} 
+	</style> 
+</head> 
+<!-- create table -->
+<body> 
+	<div class = title > Sample </div> 
+	<form action="/action_page.php">
+		<div class="form-group">
+			<label for="pwd">Diameter(mm):</label>
+			<input type="password" class="form-control" id="dia">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Length(mm):</label>
+			<input type="password" class="form-control" id="len">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Material Type:</label>
+			<select id="type">
+				<option value="volvo">Free Cutting</option>
+				<option value="saab">Coppper</option>
+				<option value="opel">Brass</option>
+				<option value="audi">Aluminium</option>
+				<option value="audi">SS</option>
+				<option value="audi">MS</option>
+			</select>	
+		</div>
+		
+		<div class="form-group">
+			<label for="pwd">Cutting Speed(v):</label>
+			<input type="password" class="form-control" id="speed">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Rate of Raw Material(Per Kg):</label>
+			<input type="password" class="form-control" id="rate">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Pieces to be Manufactured:</label>
+			<input type="password" class="form-control" id="pieces">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Length of the Rod(ft) :</label>
+			<input type="password" class="form-control" id="rodlen">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Max RPM:</label>
+			<input type="password" class="form-control" id="maxrpm">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Selected RPM:</label>
+			<input type="password" class="form-control" id="rpm">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Machine:</label>
+			<select id="machine">
+				<option value="volvo">Sliding Head</option>
+				<option value="saab">Traub</option>
+				<option value="opel">BSA</option>
+				<option value="audi">MAS</option>
+			</select>	
+		</div>
+		<div class="form-group">
+			<label for="pwd">Operations:</label>
+			<input type="password" class="form-control" placeholder="Distance" id="dis">
+			<input type="password" class="form-control" placeholder="D.O.C" id="doc">
+			<button type="submit" class="btn btn-default"> Add</button>
+		</div>
+		
+		
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</body> 
+</html> 
